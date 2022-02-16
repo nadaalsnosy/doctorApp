@@ -1,0 +1,25 @@
+@import "~bootstrap/scss/bootstrap";
+
+* {
+  box-sizing: border-box !important;
+}
+
+.md-fs {
+  font-size: 14px;
+}
+.sm-fs {
+  font-size: 12px;
+}
+.green {
+  color: #7cd193;
+}
+.light-blue {
+  color: #2e90db;
+}
+
+.dark-blue {
+  color: #006ec9;
+}
+.bold {
+  font-weight: bolder;
+}
