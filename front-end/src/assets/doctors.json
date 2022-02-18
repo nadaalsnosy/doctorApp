@@ -1,7 +1,6 @@
 [
     {
-        "name": "Eman",
-        "lastName": "Tantawy",
+        "userName": "Eman Tantawy",
         "specialty": "Ph.D. and Consultant Oral and Maxillofacial Surgery",
         "visitors": 402,
         "moreInfo": "Dentist Specialized in Cosmetic Dentistry, Oral Radiology, Elder Dentistry and Pediatric Dentistry",
@@ -17,8 +16,7 @@
         ]
     },
     {
-        "name": "Ghada",
-        "lastName": "Yehya",
+        "userName": "Ghada Yehya",
         "specialty": "Dental Esthetic Specialist",
         "visitors": 80,
         "moreInfo": "Dentist Specialized in Pediatric Dentistry, Implantology, Endodontics and Orthodontics",
@@ -34,8 +32,7 @@
         ]
     },
     {
-        "name": "Ahmed",
-        "lastName": "Badrr",
+        "userName": "Ahmed Badrr",
         "specialty": "Specialist of Dentistry - Badr Dental Center",
         "visitors": 158,
         "moreInfo": "Dentist Specialized in Adult Dentistry, Elder Dentistry, Oral and Maxillofacial Surgery and Pediatric Dentistry",
@@ -51,8 +48,7 @@
         ]
     },
     {
-        "name": "Ali",
-        "lastName": "Eltahan",
+        "userName": "Ali Eltahan",
         "specialty": "Masters of Endodontics , Mastership Of Laser Therapy in Dentistry",
         "visitors": 117,
         "moreInfo": "Dentist Specialized in Elder Dentistry, Oral Radiology, Pediatric Dentistry and Adult Dentistry",
@@ -68,8 +64,7 @@
         ]
     },
     {
-        "name": "Passent",
-        "lastName": "Ahmed",
+        "userName": "Passent Ahmed",
         "specialty": "Dentist",
         "visitors": 33,
         "moreInfo": "Dentist Specialized in Endodontics, Adult Dentistry, Cosmetic Dentistry and Pediatric Dentistry",
@@ -85,8 +80,7 @@
         ]
     },
     {
-        "name": "Mohamed",
-        "lastName": "Elhadidy",
+        "userName": "Mohamed hadidy",
         "specialty": "Implant Ortho Specialist",
         "visitors": 153,
         "moreInfo": "Dentist Specialized in Oral and Maxillofacial Surgery, Endodontics, Cosmetic Dentistry and Implantology",
@@ -102,8 +96,7 @@
         ]
     },
     {
-        "name": "Selim",
-        "lastName": "Gouda",
+        "userName": "Selim Gouda",
         "specialty": "DDs, MSc in Implant Dentistry, Frankfurt- Germany.",
         "visitors": 218,
         "moreInfo": "Dentist Specialized in Implantology, Cosmetic Dentistry, Endodontics and Elder Dentistry",
@@ -119,8 +112,7 @@
         ]
     },
     {
-        "name": "Hanaa",
-        "lastName": "Fouad",
+        "userName": "Hanaa Fouad",
         "specialty": "Consultant of Endodontics, Prosthodontics and Implantology, Master of Endodontics",
         "visitors": 250,
         "moreInfo": "Dentist Specialized in Pediatric Dentistry, Implantology, Cosmetic Dentistry and Endodontics",

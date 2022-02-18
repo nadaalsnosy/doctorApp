@@ -1,1 +1,16 @@
-<p>user-profile works!</p>
+<div class="card border-0 mx-auto my-3 bg-light" style="max-width: 540px">
+  <div class="row borders g-0">
+    <div class="col-4 p-2 my-3">
+      <img src="../../../assets/doctor{{ item.i }}.jpg" />
+    </div>
+    <div class="col-8 px-1">
+      <div class="card-body text-secondary">
+        <h5 class="dark-blue mb-3">Name: {{ item.userName }}</h5>
+        <h5 class="mb-3">Email:{{ item.email }}</h5>
+        <h5 class="mb-3">BirthDate:{{ item.mobile }}</h5>
+        <h5 class="mb-3">Mobile:{{ item.mobile }}</h5>
+        <!-- <app-button-template [doctor]="item"></app-button-template> -->
+      </div>
+    </div>
+  </div>
+</div>

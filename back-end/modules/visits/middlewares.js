@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const util = require('util');
-const Doctor = require('./doctorModel');
+const Visit = require('./visitModel');
 const bcrypt = require('bcrypt');
 
 const asyncVerify = util.promisify(jwt.verify);
@@ -10,7 +10,7 @@ const Joi = require('joi');
 const validateData = async (req, res, next) => {
     try {
         const schema = Joi.object({
-            doctorname: Joi.string().min(3),
+            visitname: Joi.string().min(3),
             email: Joi.string().email(),
             password: Joi.string().pattern(new RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})')),
             gender: Joi.string().valid('female', 'male'),
@@ -50,8 +50,8 @@ const verifyToken = async (req, res, next) => {
     const { authorization } = req.headers;
     try {
         const payload = await asyncVerify(authorization, process.env.SECRET_KEY);
-        const doctor = await Doctor.findById(payload.id)
-        req.doctor = doctor;
+        const visit = await Visit.findById(payload.id)
+        req.visit = visit;
     } catch (error) {
         error.message = "unauthorized";
         error.statusCode = 403;

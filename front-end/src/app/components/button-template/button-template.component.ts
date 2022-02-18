@@ -10,7 +10,6 @@ import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 export class ButtonTemplateComponent implements OnInit {
   closeResult = '';
   faCalendarAlt = faCalendarAlt;
-  btnTitle = 'Save';
 
   date: any = '';
 
@@ -21,7 +20,8 @@ export class ButtonTemplateComponent implements OnInit {
   ngOnInit(): void {}
 
   getData() {
-    console.log(this.doctor);
+    console.log(this.doctor.userName);
+    console.log(this.doctor.specialty);
     console.log(this.date);
   }
 

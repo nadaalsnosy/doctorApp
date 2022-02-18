@@ -1,42 +1,14 @@
-
 <div class="card border-0 mx-auto my-3" style="max-width: 540px">
-    <div class="row borders g-0">
-      <div class="col-4 p-2 my-3">
-        <img src="../../../assets/doctor{{ item.i }}.jpg" />
-      </div>
-      <div class="col-8 px-1">
-        <div class="card-body text-secondary">
-          <h6 class="dark-blue md-fs fw-bolder">
-            <span class="fw-normal light-blue sm-fs">Doctor</span>
-            {{ item.name }} {{ item.lastName }}
-          </h6>
-          <h6 class="sm-fs mb-0">{{ item.specialty }}</h6>
-          <app-star-rating></app-star-rating>
-          <h6 class="sm-fs">{{ item.visitors }} Visitors Reviews</h6>
-          <h6 class="sm-fs">
-            <!-- <fa-icon class="light-blue" [icon]="faStethoscope"></fa-icon> -->
-            {{ item.moreInfo }}
-          </h6>
-          <h6 class="sm-fs">
-            <!-- <fa-icon class="light-blue" [icon]="faMapMarkerAlt"></fa-icon> -->
-            {{ item.country }} {{ item.city }}
-          </h6>
-          <h6 class="sm-fs">
-            <!-- <fa-icon class="light-blue" [icon]="faMoneyBillWave"></fa-icon> -->
-            Fees:{{ item.fees }} EGP
-          </h6>
-          <h6 class="green sm-fs">
-            <!-- <fa-icon [icon]="faClock"></fa-icon> Waiting Time:{{ item.waitTime }} -->
-            Minutes
-          </h6>
-          <h6 class="dark-blue sm-fs">
-            <!-- <fa-icon class="light-blue" [icon]="faPhoneAlt"></fa-icon> 16676 - -->
-            <span class="text-secondary"> Cost of regular call</span>
-          </h6>
-          <h6 class="sm-fs">Days: {{ item.days }}</h6>
-          <app-button-template></app-button-template>
-        </div>
+  <div class="row borders g-0">
+    <div class="col-8 px-1">
+      <div class="card-body text-secondary">
+        <h6 class="dark-blue md-fs fw-bolder">
+          Doctor {{ item.userName }}
+        </h6>
+        <h6 class="sm-fs mb-0">{{ item.specialty }}</h6>
+        <h6 class="md-fs">Date: {{ item.date }}</h6>
+        <button class="btn btn-primary mt-3">Cancle Booking</button>
       </div>
     </div>
   </div>
-  
+</div>
