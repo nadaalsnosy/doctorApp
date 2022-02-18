@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { VisitsService } from './../../services/visits.service';
 import { Component, OnInit, Input } from '@angular/core';
 import vistsData from '../../../assets/visits.json';
 
@@ -10,12 +10,18 @@ import vistsData from '../../../assets/visits.json';
 export class VisitsComponent implements OnInit {
   items: any = vistsData;
 
-  // constructor(private http: HttpClient) {
-  //   this.http.get(this.data).subscribe(res => {
-  //     console.log(res);
-  //     this.items = res;
-  //   });
-  // }
+  constructor(private VisitsService: VisitsService) {
+    this.VisitsService.getAll().subscribe((res) => {
+      console.log(res);
+      this.items = res;
+    });
+  }
 
   ngOnInit(): void {}
+
+  // getAllData() {
+  //   this.VisitsService.getAll().subscribe(
+  //     (response: any) => (this.visit = response)
+  //   );
+  // }
 }

@@ -27,22 +27,50 @@ const login = async (req, res, next) => {
     }
 }
 
+// const addVisit = async (req, res, next) => {
+//     const { doctorName, specialty, date, doctorId, userId } = req.body;
+
+//     // const { visitname, email, password, gender, birthDate, mobile, admin } = req.body;
+//     try {
+//         // const visit = new Visit({ visitname, email, password, gender, birthDate, mobile, admin });
+//         const newVisit = new Visit({ doctorName, specialty, date, doctorId, userId });
+//         // const createdVisit = await visit.save();
+//         const createdVisit = await newVisit.save();
+//         const visitData = await newVisit.save().then((listDoc) => {
+//             res.send(listDoc);
+//         })
+//         // res.send(createdVisit);
+//     } catch (error) {
+//         error.statusCode = 500;
+//         next(error);
+//     }
+// }
+
 const addVisit = async (req, res, next) => {
-    const { visitname, email, password, gender, birthDate, mobile, admin } = req.body;
+    let { doctorName, specialty, date, doctorId, userId } = req.body;
+
     try {
-        const visit = new Visit({ visitname, email, password, gender, birthDate, mobile, admin });
-        const createdVisit = await visit.save();
-        res.send(createdVisit);
+        let newVisit = new Visit({ doctorName, specialty, date, doctorId, userId });
+
+        console.log(newVisit);
+
+        newVisit.save().then((listDoc) => {
+            res.send(listDoc);
+        })
+
     } catch (error) {
         error.statusCode = 500;
         next(error);
     }
 }
 
+
 const getAllVisits = async (req, res, next) => {
     try {
+
         const visits = await Visit.find();
         res.send(visits);
+
     } catch (error) {
         error.statusCode = 500;
         next(error);

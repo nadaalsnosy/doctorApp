@@ -10,7 +10,7 @@ doctorRouter.post('/signUp', preHash, addDoctor);
 doctorRouter.patch('/:id', validateData, preHash, editDoctor);
 doctorRouter.delete('/:id', deleteDoctor);
 doctorRouter.post('/login', login);
-doctorRouter.post('/appointments/:id', booking);
+// doctorRouter.post('/appointments/:id', booking);
 
 
 module.exports = doctorRouter;

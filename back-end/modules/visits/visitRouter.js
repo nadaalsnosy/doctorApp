@@ -9,7 +9,8 @@ const { validateData, verifyToken, preHash } = require('./middlewares');
 visitRouter.get('/', getAllVisits);
 visitRouter.post('/', preHash, addVisit);
 
-visitRouter.post('/login', login);
+// visitRouter.post('/login', login);
+
 
 visitRouter.get('/profile', verifyToken, async (req, res, next) => {
     res.send(req.visit);

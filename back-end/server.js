@@ -1,36 +1,39 @@
 const express = require('express')
 const app = express()
+
 const userRouter = require('./modules/users/userRouter');
+const visitRouter = require('./modules/visits/visitRouter')
+const doctorRouter = require('./modules/doctors/doctorRouter')
+
 const mongoose = require('mongoose');
-// const cors = require('cors');
+const cors = require('cors');
 // const axios = require('./axiosData');
 require('dotenv').config();
-
 const port = 3000;
 
 app.use(express.json());
-// app.use(express.urlencoded());
-// app.use(cors());
+app.use(cors());
 
-// app.use(express.static('public',{
-//     index:"layout.html"
-// }));
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 
 app.use('/users', userRouter);
+app.use('/visits', visitRouter);
+app.use('/doctors', doctorRouter);
 
-// app.get('/dataFromJson', async (req, res) => {
-//     const { data } = await axios.get("/todos");
-//     res.json(data);
-// })
 
-mongoose.connect('mongodb://localhost:27017/doctorsApp',(err)=>{
-    if(err) process.exit(1);
+
+mongoose.connect('mongodb://localhost:27017/doctorsApp', (err) => {
+    if (err) process.exit(1);
     console.log("connected to database successfully");
 });
 
 
 app.listen(port, () => {
-  console.log(`express app listening on port ${port}`)
+    console.log(`express app listening on port ${port}`)
 })
 
 app.use((err, req, res, next) => {

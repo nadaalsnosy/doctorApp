@@ -1,3 +1,4 @@
+import { VisitsService } from './../../services/visits.service';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -8,7 +9,13 @@ import { Component, OnInit, Input } from '@angular/core';
 export class NavbarComponent implements OnInit {
   username = 'user name';
   @Input() title = '';
-  constructor() {}
+  constructor(private VisitsService: VisitsService) {}
 
   ngOnInit(): void {}
+
+  // getAllData() {
+  //   this.VisitsService.getAll().subscribe(
+  //     (response: any) => (this.visit = response)
+  //   );
+  // }
 }

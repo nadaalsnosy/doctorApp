@@ -2,27 +2,26 @@ const mongoose = require('mongoose');
 // const bcrypt = require('bcrypt');
 
 const visitSchema = new mongoose.Schema({
-    username: {
+    doctorName: {
         type: String,
-        required: true,
+        // required: true,
         min: 3
+    },
+    specialty: {
+        type: String,
+        // required: true
+    },
+    date: {
+        type: String,
     },
     doctorId: {
         type: String,
-        required: true
+        // required: true
     },
     userId: {
         type: String,
-        required: true
+        // required: true
     },
-    specialist: {
-        type: String,
-        required: true
-    },
-
-    visitDate: {
-        type: String,
-    }
 });
 
 module.exports = visitSchema;
