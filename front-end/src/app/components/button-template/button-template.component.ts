@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
-import { faCalendarAlt} from '@fortawesome/free-solid-svg-icons';
+import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-button-template',
@@ -10,21 +10,19 @@ import { faCalendarAlt} from '@fortawesome/free-solid-svg-icons';
 export class ButtonTemplateComponent implements OnInit {
   closeResult = '';
   faCalendarAlt = faCalendarAlt;
-  btnTitle = 'Book';
-  isLoading = false;
+  btnTitle = 'Save';
+
+  date: any = '';
+
+  @Input() doctor: any = {};
 
   constructor(private modalService: NgbModal) {}
 
   ngOnInit(): void {}
 
-  getLoadinegTitle() {
-    this.isLoading = true;
-    this.btnTitle = 'Loading...';
-
-    setTimeout(() => {
-      this.isLoading = false;
-      this.btnTitle = 'Send';
-    }, 2000);
+  getData() {
+    console.log(this.doctor);
+    console.log(this.date);
   }
 
   open(content: any) {

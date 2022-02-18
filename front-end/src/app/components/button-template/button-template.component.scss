@@ -1,3 +1,12 @@
 .fs-cal {
   font-size: 22px;
 }
+.btn-outline-secondary:hover,
+.btn-outline-dark:hover {
+  color: #fff !important;
+  background-color: #297ffd !important;
+  border-color: #79afff !important;
+  & .hover-white {
+    color: #fff !important;
+  }
+}

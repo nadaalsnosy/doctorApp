@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { faPhoneAlt, faMapMarkerAlt , faMoneyBillWave , faClock , faStethoscope} from '@fortawesome/free-solid-svg-icons';
+import { faPhoneAlt, faMapMarkerAlt , faMoneyBillWave , faClock , faStethoscope } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-card',
@@ -12,8 +12,7 @@ export class CardComponent implements OnInit {
   faMoneyBillWave = faMoneyBillWave;
   faClock = faClock;
   faStethoscope = faStethoscope;
-
-
+  
   @Input() item: any = {};
 
   constructor() {}

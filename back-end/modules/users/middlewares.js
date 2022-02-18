@@ -65,3 +65,12 @@ module.exports = {
     verifyToken,
     preHash
 }
+
+
+// {
+//     "email": "hala1234@yoyo.com",
+//     "password": "12345@As"
+//     }
+
+
+// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMGQ4YjY4ZTU5MTU4YWRkYTRmMzQ3NiIsImlhdCI6MTY0NTA1NDk4M30.kJ8LW0W_ewoz2HYY2DvZurxViaRzVrhVviRMNW4Xhvk

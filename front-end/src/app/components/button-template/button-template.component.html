@@ -1,6 +1,6 @@
 <ng-template #content let-modal>
   <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+    <h4 class="modal-title" id="modal-basic-title">Booking Data</h4>
     <button
       type="button"
       class="close"
@@ -13,12 +13,15 @@
   <div class="modal-body">
     <form>
       <div class="form-group">
-        <label for="dateOfBirth">Date of birth</label>
+        <label class="mb-2 text-primary" for="dateOfBirth"
+          >Choose the data</label
+        >
         <div class="input-group">
           <input
             id="dateOfBirth"
-            class="form-control"
-            placeholder="yyyy-mm-dd"
+            class="form-control py-0"
+            placeholder="choose date"
+            [(ngModel)]="date"
             name="dp"
             ngbDatepicker
             #dp="ngbDatepicker"
@@ -28,7 +31,12 @@
               class="btn btn-outline-secondary calendar p-0 px-2"
               (click)="dp.toggle()"
               type="button"
-            ><fa-icon class="fs-cal light-blue" [icon]="faCalendarAlt"></fa-icon></button>
+            >
+              <fa-icon
+                class="fs-cal light-blue hover-white"
+                [icon]="faCalendarAlt"
+              ></fa-icon>
+            </button>
           </div>
         </div>
       </div>
@@ -38,18 +46,14 @@
     <button
       type="button"
       class="btn btn-outline-dark"
-      (click)="modal.close('Save click')"
+      (click)="modal.close('Save click'); getData()"
     >
-      Save
+      {{ btnTitle }}
     </button>
   </div>
 </ng-template>
 
-
-<button class="btn btn-primary my-3 {{isLoading ? 'disable' :''}}" (click)="getLoadinegTitle(); open(content)">
-    {{btnTitle}}
-    <fa-icon *ngIf="isLoading" [icon]="['fas', 'spinner']" [spin]="true"></fa-icon>
-</button>
+<button class="btn btn-primary my-3" (click)="open(content)">book</button>
 
 <!-- <button class="btn btn-lg btn-outline-primary" (click)="open(content)">
   Book

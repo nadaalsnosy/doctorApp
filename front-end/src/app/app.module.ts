@@ -1,8 +1,8 @@
+// import { HttpClient } from '@angular/common/http';
 import { ButtonTemplateComponent } from './components/button-template/button-template.component';
-import { ButtonComponent } from './components/button/button.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardComponent } from './components/card/card.component';
@@ -19,7 +19,11 @@ import { DoctorDetailsComponent } from './pages/doctor-details/doctor-details.co
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { StarRatingComponent } from './components/star-rating/star-rating.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-
+import { FooterComponent } from './components/footer/footer.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { VisitsComponent } from './components/visits/visits.component';
+import { VisitCardComponent } from './components/visit-card/visit-card.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,12 +34,22 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     LoginComponent,
     SignupComponent,
     DoctorDetailsComponent,
-    ButtonComponent,
     ButtonTemplateComponent,
     StarRatingComponent,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent,
+    UserProfileComponent,
+    VisitsComponent,
+    VisitCardComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, NgbModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FontAwesomeModule,
+    NgbModule,
+    FormsModule,
+    HttpClientModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

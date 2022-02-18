@@ -8,18 +8,18 @@ const asyncSign = util.promisify(jwt.sign);
 const secretKey = "kokololososomomofofo";
 
 const login = async (req, res, next) => {
-    const { username, password } = req.body;
+    const { email, password } = req.body;
     try {
-        const user = await User.findOne({ username });
-        if (!user) throw new Error('invalid username or password');
+        const user = await User.findOne({ email });
+        if (!user) throw new Error('invalid email or password');
 
         const { password: hashedPassword } = user;
         const result = await bcrypt.compare(password, hashedPassword);
-        if (!result) throw new Error('invalid username or password');
+        if (!result) throw new Error('invalid email or password');
 
         const token = await asyncSign({
-            id: user.id
-        }, secretKey);
+            id: user._id.toString()
+        }, process.env.SECRET_KEY);
 
         res.send({ token });
     } catch (error) {
